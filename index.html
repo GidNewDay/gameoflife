@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мини-игра Жизнь</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <h1>Мини-игра &laquo;Жизнь&raquo;</h1>
+    <h2>Параметры</h2>
+    <div class="params">
+      <div class="param">
+        <input type="number" id="field-width" placeholder=" " value="100" min="3" max="5000"/>
+        <label for="field-width">Ширина</label>
+      </div>
+      <div class="param">
+        <input type="number" id="field-height" placeholder=" " value="100" min="3" max="5000"/>
+        <label for="field-height">Высота</label>
+      </div>
+      <div class="param">
+        <input type="number" id="speed" placeholder=" " value="100" min="10" max="5000"/>
+        <label for="speed">Скорость</label>
+      </div>
+    </div>
+    <div class="param">
+      <select id="template">
+        <option value="">нет</option>
+        <optgroup label="Still lifes">
+         <option value="block">Block</option>
+         <option value="loaf">Loaf</option>
+         <option value="boat">Boat</option>
+        </optgroup>
+        <optgroup label="Oscillators">
+         <option value="blinker">Blinker</option>
+         <option value="toad">Toad</option>
+         <option value="beacon">Beacon</option>
+         <option value="pulsar">Pulsar</option>
+         <option value="penta">Penta-decathlon</option>
+        </optgroup>
+        <optgroup label="Spaceships">
+          <option value="glider">Glider</option>
+          <option value="lwss">Light-weight </option>
+          <option value="mwss">Middle-weight </option>
+          <option value="hwss">Heavy-weight </option>
+         </optgroup>
+        </select>
+      <button id="start">Старт</button>
+    </div>
+    <canvas id="conway" width="500" height="500"></canvas>
+    <script src="js/templates.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
